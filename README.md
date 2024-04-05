@@ -6,9 +6,9 @@ repo hackthon 5-7 abril
 Site de eventos culturais desportivos e de lazer/socias na proximidade do utilizador
 
 
-- React - Frontend (Simão e Simão)
+- React - Frontend (Tiago e Simão C)
 
-- NodeJS - Backend (Ima e Tiago) 
+- NodeJS - Backend (Ima e Simão B) 
 
 - Geração de datasets/api - Simão B
 
