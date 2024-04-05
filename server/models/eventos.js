@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+/*
 var localSchema = new mongoose.Schema({
     _id: {
         type: mongoose.Types.ObjectId,
@@ -8,9 +8,10 @@ var localSchema = new mongoose.Schema({
     fregusesia: String,
     morada: String
 });
+*/
 
 var eventosSchema = new mongoose.Schema({
-    _id: String,
+    _id: Number,
     titulo: String,
     subtitulo: String,
     categorias: String,
@@ -18,13 +19,18 @@ var eventosSchema = new mongoose.Schema({
     data: String,
     bilheteira: String,
     fotos: String,
-    duracao: Number,
     meteorologia: String,
     lotacao: Number,
     descricao: String,
-    promotor: String,
+    duracao: Number,
+    distrito: String,
+    freguesia: String,
     casaEspetaculo: String,
-    local: [localSchema]
+    morada: String,
+    promotor: String
+
+    //local: [localSchema]
 });
+
 
 module.exports = mongoose.model('eventos', eventosSchema)
