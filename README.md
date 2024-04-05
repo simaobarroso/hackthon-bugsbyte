@@ -31,14 +31,11 @@ Eventos:
 10. Lotação
 11. Descrição
 12. Promotor
+13. Local
 
 Promotor: 
 1. Nome
 2. email
 3. contacto
 4. Foto
-5. Instituição / Pessoa (se é um ou outro)
-
-
-
-
+5. promotor -> Instituição / Pessoa
