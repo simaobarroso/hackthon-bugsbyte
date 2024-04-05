@@ -1,0 +1,63 @@
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Adjust according to your layout */
+}
+
+.map-svg {
+    width: 30%;
+    /* Adjust according to your layout */
+    height: auto;
+    fill: #ccc;
+    /* Adjust color as needed */
+}
+
+/* Altera a cor do preenchimento ao passar o cursor sobre os caminhos .map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Adjust according to your layout */
+
+
+.map-svg {
+    width: 30%;
+    /* Adjust according to your layout */
+    height: auto;
+    fill: #ccc;
+    /* Adjust color as needed */
+}
+
+/* Altera a cor do preenchimento ao passar o cursor sobre os caminhos */
+.map-svg path:hover {
+    fill: #ff0000;
+    /* Altere para a cor desejada */
+}
+
+.message-box {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-box p {
+    margin-bottom: 10px;
+}
+
+.message-box button {
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}*/
+.map-svg path:hover {
+    fill: #ff0000;
+    /* Altere para a cor desejada */
+}
