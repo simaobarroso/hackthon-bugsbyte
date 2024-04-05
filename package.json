@@ -1,0 +1,15 @@
+{
+  "name": "hackthon-bugsbyte",
+  "version": "1.0.0",
+  "description": "repo hackthon 5-7 abril",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
