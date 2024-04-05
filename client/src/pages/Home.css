@@ -1,39 +1,37 @@
+.container{
+    width: 100%;
+    display: flex;
+}
+
 .map-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* Adjust according to your layout */
+    width: 50%;
+    transition: margin-left 0.5s ease;
+    margin-left: 25%;
+    /* Definir a margem esquerda para 25% para centralizar inicialmente */
+}
+
+.map-container.slide-left {
+    margin-left: -10%;
+    /* Reduzindo a margem esquerda para evitar que o mapa desapareça completamente */
+}
+
+.semi-container{
+    width:60%;
+    background-color: red
 }
 
 .map-svg {
-    width: 30%;
-    /* Adjust according to your layout */
-    height: auto;
     fill: #ccc;
-    /* Adjust color as needed */
+    width: 100%;
+    height: auto;
 }
 
-/* Altera a cor do preenchimento ao passar o cursor sobre os caminhos .map-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* Adjust according to your layout */
-
-
-.map-svg {
-    width: 30%;
-    /* Adjust according to your layout */
-    height: auto;
-    fill: #ccc;
-    /* Adjust color as needed */
-}
-
-/* Altera a cor do preenchimento ao passar o cursor sobre os caminhos */
 .map-svg path:hover {
     fill: #ff0000;
-    /* Altere para a cor desejada */
 }
 
 .message-box {
@@ -56,8 +54,4 @@
     border: none;
     padding: 5px 10px;
     cursor: pointer;
-}*/
-.map-svg path:hover {
-    fill: #ff0000;
-    /* Altere para a cor desejada */
 }
