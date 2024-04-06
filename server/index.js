@@ -7,6 +7,13 @@ const PORT = process.env.PORT || 3001;
 var Evento = require("./controllers/eventos");
 var Promotor = require("./controllers/promotor");
 
+function mergeObjects(data, q) {
+  for (var key in q) {
+    if (q.hasOwnProperty(key)) {
+      data[key] = q[key];
+    }
+  }
+}
 
 var mongoose = require ('mongoose')
 
@@ -49,6 +56,10 @@ app.get("/api/eventos/outros", (req, res) => {
   console.log(req.query.distrito) 
   console.log("-------------------")
   var q = {};
+  var data = {};
+  var d1 = {};
+  var d2 = {};
+  var d3 = {};
 
   if (req.query.distrito != null && req.query.distrito != "null" ) {
     if (req.query.distrito == "VianadoCastelo") {
@@ -65,6 +76,34 @@ app.get("/api/eventos/outros", (req, res) => {
     }
 
   }
+  if(req.query.hora != null && req.query.hora != "null" ){
+    data = {"data.hora" : req.query.hora};
+
+    mergeObjects(q,data);
+  }
+
+  if(req.query.dia != null && req.query.dia != "null" ){
+    d1 = {"data.dia" : req.query.dia};
+
+    mergeObjects(q,d1);
+  }
+
+  if(req.query.mes != null && req.query.mes != "null" ){
+    d2 = {"data.mes" : req.query.mes};
+
+    mergeObjects(q,d2);
+  }
+
+  if(req.query.diaSemana != null && req.query.diaSemana != "null" ){
+    d3 = {"data.diaDaSemana" : req.query.diaSemana};
+
+    mergeObjects(q,d3);
+  }
+
+  if (req.query.promotor != null && req.query.promotor != "null") {
+    q.promotor = req.query.promotor;
+  }
+
   if (req.query.concelho != null && req.query.concelho != "null") {
       q.concelho = req.query.concelho;
   }
