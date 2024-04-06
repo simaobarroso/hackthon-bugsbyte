@@ -45,20 +45,22 @@ app.get("/api/eventos/diferentesCategorias", (req, res) => {
 });
 
 app.get("/api/eventos/outros", (req, res) => {
-  var query = {};
+  console.log("-------------------")
+  console.log(req.query.distrito) 
+  console.log("-------------------")
+  var q = {};
 
-  if (req.body.distrito !== null) {
-      query.distrito = req.body.distrito;
+  if (req.query.distrito != null) {
+      q.distrito = req.query.distrito;
   }
-  if (req.body.concelho !== null) {
-      query.concelho = req.body.concelho;
+  if (req.query.concelho != null) {
+      q.concelho = req.query.concelho;
   }
-  if (req.body.categorias !== null) {
-    query.categorias = req.body.categorias;
-}
-  // distrito, // concelho //categorias
-  console.log(req.body) 
-  Evento.queryBD(query)
+  if (req.query.categorias != null) {
+    q.categorias = req.query.categorias;
+  }
+  console.log(q);
+  Evento.queryBD(q)
   .then(dados => {
     console.log("/api/eventos");
     res.json(dados);
