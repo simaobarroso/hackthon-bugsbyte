@@ -26,13 +26,14 @@ const Home = () => {
     const [messageSearch, setMessageSearch] = useState(null);
     const [selectedDistrict, setSelectedDistrict] = useState(null);
     const [selectedConcelho, setSelectedConcelho] = useState(null);
+    const [selectedConcelhoName, setSelectedConcelhoName] = useState(null);
     const [selectedCategoria, setSelectedCategoria] = useState('Todas');
 
     // Mapeamento de nomes de distritos para SVGs correspondentes
     const districtMap = {
         Aveiro: <div className="district-container"><h2>Aveiro</h2><AveiroSvg className="district-svg" /></div>,
         Beja: <div className="district-container"><h2>Beja</h2><BejaSvg className="district-svg"/></div>,
-        Braga: <div className="district-container"><h2>Braga</h2><BragaSvg className="district-svg"/></div>,
+        Braga: <div className="district-container"><h2>Braga</h2>{selectedConcelho && (<h3>{selectedConcelhoName}</h3>)}<BragaSvg className="district-svg"/></div>,
         Bragança: <div className="district-container"><h2>Bragança</h2><BragancaSvg className="district-svg"/></div>,
         CasteloBranco: <div className="district-container"><h2>Castelo Branco</h2><CasteloBrancoSvg className="district-svg"/></div>,
         Coimbra: <div className="district-container"><h2>Coimbra</h2><CoimbraSvg className="district-svg"/></div>,
@@ -65,6 +66,7 @@ const Home = () => {
         setSelectedConcelho(null);
         setMessageSearch(null);
         setSelectedCategoria('Todas');
+        setSelectedConcelhoName(null);
     };
 
     // Função para decodificar uma string contendo sequências de escape Unicode
@@ -101,13 +103,16 @@ const Home = () => {
                         selectedConcelho.classList.remove('selected')
                     }
                     event.target.classList.add('selected');
-                    setSelectedConcelho(event.target)
+                    setSelectedConcelho(event.target);
+                    setSelectedConcelhoName(concelho);
                 }
                 else {
                     event.target.classList.remove('selected')
                     setSelectedConcelho(null);
+                    setSelectedConcelhoName(null);
                     messageText = `${selectedDistrict} (Distrito) selecionado!`;
                 }
+                
                 setMessage(messageText);
             }
         }
