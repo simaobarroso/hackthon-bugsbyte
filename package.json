@@ -16,5 +16,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "mongoose": "^8.3.0"
   }
 }
