@@ -27,8 +27,9 @@ h2 {
 
 .semi-container {
     width: 50%;
-    background-color: red;
+    background-color: #80171b;
     overflow-y: auto; /* Adiciona barra de rolagem vertical apenas quando necessário */
+    padding-top: 20px;
 }
 
 
@@ -57,20 +58,18 @@ h2 {
 }
 
 .selected {
-    fill: #ff0000;
+    fill: #80171b;
 }
 
-.selectedCategoria {
-    background-color: #ff0000;
-}
+
 
 .district-svg path:hover {
-    fill: #ff0000;
+    fill: #80171b;
     cursor:pointer;
 }
 
 .map-svg path:hover {
-    fill: #ff0000;
+    fill: #80171b;
     cursor:pointer; 
 }
 
@@ -100,3 +99,72 @@ svg {
     display: block; /* Garante que o SVG fique centralizado */
     margin: 0 auto; /* Centraliza o SVG horizontalmente */
   }
+
+.search-container input {
+    width: 50%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  margin: 0 2rem;
+}
+
+/* Underline styles */
+a {
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+  color: white;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+/* Scale from center */
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: white;
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+  transition: opacity 300ms, transform 300ms;
+}
+
+a:hover::after,
+a:focus::after{
+  transform: scale(1);
+  font-weight: bold;  
+}

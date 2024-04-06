@@ -160,11 +160,11 @@ const Home = () => {
 
     const selectCategoria = (categoria) => {
 
-        let previousCategoria = document.getElementById(selectedCategoria);
-        previousCategoria.classList.remove('selectedCategoria')
+        //let previousCategoria = document.getElementById(selectedCategoria);
+        //previousCategoria.classList.remove('selectedCategoria')
 
         let newCategoria = document.getElementById(categoria);
-        newCategoria.classList.add('selectedCategoria')
+        //newCategoria.classList.add('selectedCategoria')
         setSelectedCategoria(categoria);
         // console.log("Categoria selecionada:", categoria);
         // Aqui você pode fazer o que precisa com a categoria selecionada
@@ -187,12 +187,19 @@ const Home = () => {
                     <div className="search-container">
                         <input type="text" id="searchInput" onChange={search} placeholder="Digite sua pesquisa aqui..." />
                     </div>
-                    <button id="Todas" className="selectedCategoria" onClick={() => selectCategoria('Todas')}>Todas</button>
-                    <button id="Desporto" onClick={() => selectCategoria('Desporto')}>Desporto</button>
-                    <button id="Entretenimento" onClick={() => selectCategoria('Entretenimento')}>Entretenimento</button>
-                    <p>{message}</p>
-                    <p>{messageSearch}</p>
-                    <p>{selectedCategoria}</p>
+                    <div>
+                        <ul className="categorias">
+                            <li>
+                            <a id="Todas" tabindex="0" autofocus onClick={() => selectCategoria('Todas')}>Todas</a>
+                            </li>
+                            <li>
+                            <a id="Desporto" tabindex="0" onClick={() => selectCategoria('Desporto')}>Desporto</a>
+                            </li>
+                            <li>
+                            <a id="Entretenimento" tabindex="0" onClick={() => selectCategoria('Entretenimento')}>Entretenimento</a>
+                            </li>
+                        </ul>
+                    </div>
                     {fetchData && (CulturalEventsScreen(fetchData))}
                     <button onClick={closeMessage}>Fechar</button>
                 </div>
