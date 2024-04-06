@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-var eventosSchema = new mongoose.Schema({
+var promotorSchema = new mongoose.Schema({
     _id: Number,
     nome: String,
     email: String,
