@@ -39,3 +39,9 @@ Promotor:
 3. contacto
 4. Foto
 5. promotor -> Instituição / Pessoa
+
+
+BD: Hackathon
+    - Collections: 
+        - eventos
+        - promotors
