@@ -1,0 +1,99 @@
+.container{
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+.district-container{
+    display: block;
+    width: 50%;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+    /* Definir a margem esquerda para 25% para centralizar inicialmente */
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.semi-container {
+    width: 50%;
+    background-color: red;
+    overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
+}
+
+
+.map-svg {
+    fill: #ccc;
+    width: 100%;
+    height: auto;
+}
+
+.district-svg {
+    fill: #ccc;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    animation: increaseSize 0.5s ease-in-out forwards; /* Adiciona a animação para aumentar o tamanho */
+}
+
+@keyframes increaseSize {
+    from {
+        transform: scale(0.5); /* Define o tamanho inicial, por exemplo, 50% */
+    }
+    to {
+        transform: scale(1); /* Define o tamanho final, por exemplo, 100% */
+    }
+}
+
+.selected {
+    fill: #ff0000;
+}
+
+.selectedCategoria {
+    background-color: #ff0000;
+}
+
+.district-svg path:hover {
+    fill: #ff0000;
+    cursor:pointer;
+}
+
+.map-svg path:hover {
+    fill: #ff0000;
+    cursor:pointer; 
+}
+
+.message-box {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-box p {
+    margin-bottom: 10px;
+}
+
+.message-box button {
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+svg {
+    display: block; /* Garante que o SVG fique centralizado */
+    margin: 0 auto; /* Centraliza o SVG horizontalmente */
+  }
