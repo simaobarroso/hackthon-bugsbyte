@@ -50,13 +50,13 @@ app.get("/api/eventos/outros", (req, res) => {
   console.log("-------------------")
   var q = {};
 
-  if (req.query.distrito != null) {
+  if (req.query.distrito != null && req.query.distrito != "null" ) {
       q.distrito = req.query.distrito;
   }
-  if (req.query.concelho != null) {
+  if (req.query.concelho != null && req.query.concelho != "null") {
       q.concelho = req.query.concelho;
   }
-  if (req.query.categorias != null) {
+  if (req.query.categorias != null && req.query.categorias != "null") {
     q.categorias = req.query.categorias;
   }
   console.log(q);
