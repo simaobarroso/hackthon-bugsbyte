@@ -51,7 +51,19 @@ app.get("/api/eventos/outros", (req, res) => {
   var q = {};
 
   if (req.query.distrito != null && req.query.distrito != "null" ) {
+    if (req.query.distrito == "VianadoCastelo") {
+      q.distrito = "Viana do Castelo";
+    }
+    else if (req.query.distrito == "CasteloBranco") {
+      q.distrito = "Castelo Branco";
+    }
+    else if (req.query.distrito == "VilaReal") {
+      q.distrito = "Vila Real";
+    }
+    else { 
       q.distrito = req.query.distrito;
+    }
+
   }
   if (req.query.concelho != null && req.query.concelho != "null") {
       q.concelho = req.query.concelho;
