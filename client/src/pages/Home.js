@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css'; // Importar arquivo CSS
 import { ReactComponent as PortugalMap } from '../assets/portugal_map.svg'; // Importar arquivo SVG do mapa de Portugal
 import { ReactComponent as AveiroSvg } from '../assets/aveiro.svg';
@@ -31,6 +31,32 @@ const Home = () => {
     const [selectedConcelho, setSelectedConcelho] = useState(null);
     const [selectedConcelhoName, setSelectedConcelhoName] = useState(null);
     const [selectedCategoria, setSelectedCategoria] = useState('Todas');
+    
+    // Change it to null by default
+    
+    const [fetchData, setFetchData] = useState(null);
+
+    useEffect(() => {
+        const getEventos = async () => {
+            try {
+                const response = await fetch(`/api/eventos/outros?distrito=${selectedDistrict}&concelho=${selectedConcelhoName}`);
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar eventos');
+                }
+                const eventosData = await response.json();
+                console.log(eventosData)
+                setFetchData(eventosData);
+            } catch (error) {
+                console.error(error);
+                // Tratar o erro, exibindo uma mensagem para o usuário, por exemplo
+            }
+        };
+        // Chama getEventos apenas se selectedDistrict não for nulo
+        if (selectedDistrict || selectedConcelhoName) {
+            getEventos();
+        }
+    }, [selectedDistrict, selectedConcelhoName]); // Dispara o useEffect apenas quando selectedDistrict mudar
+
 
     const generateDistrictJSX = (districtName, SvgComponent) => (
         <div className="district-container">
@@ -100,6 +126,7 @@ const Home = () => {
 
                 // Exibe a mensagem correspondente e atualiza o distrito selecionado
                 showMessage(messageText, district);
+        
             } else {
                 let messageText = ""
                 if (!event.target.classList.contains("selected")) {
@@ -166,7 +193,7 @@ const Home = () => {
                     <p>{message}</p>
                     <p>{messageSearch}</p>
                     <p>{selectedCategoria}</p>
-                    <CulturalEventsScreen />
+                    {fetchData && (<p>fetchData</p>)}
                     <button onClick={closeMessage}>Fechar</button>
                 </div>
             )}
