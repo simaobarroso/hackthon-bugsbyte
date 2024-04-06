@@ -11,3 +11,27 @@ module.exports.getEventos = () => {
                 return erro
             })
 }
+
+module.exports.diferentesCategorias = () => {
+    return Evento
+            .distinct("categorias")
+            .then(resposta => {
+                return resposta
+            })
+            .catch(erro => {
+                return erro
+            })
+}
+
+module.exports.queryBD = (a) => {
+    return Evento
+            .find(a)
+            .then(resposta => {
+                return resposta
+            })
+            .catch(erro => {
+                return erro
+            })
+}
+
+
