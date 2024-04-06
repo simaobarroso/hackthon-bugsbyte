@@ -14,7 +14,7 @@ Site de eventos culturais desportivos e de lazer/socias na proximidade do utiliz
 
 Ideias a expandir depois: Users, reviews, notifuicações, geolocalização, etc
 
-# Arquitetura do Projeto - Site de eentos
+# Arquitetura do Projeto - CulturUM
 
 #### Entidades
 
