@@ -29,26 +29,33 @@ const Home = () => {
     const [selectedConcelhoName, setSelectedConcelhoName] = useState(null);
     const [selectedCategoria, setSelectedCategoria] = useState('Todas');
 
-    // Mapeamento de nomes de distritos para SVGs correspondentes
+    const generateDistrictJSX = (districtName, SvgComponent) => (
+        <div className="district-container">
+            <h2>{districtName}</h2>
+            {selectedConcelho && (<h3>{selectedConcelhoName}</h3>)}
+            <SvgComponent className="district-svg" />
+        </div>
+    );
+    
     const districtMap = {
-        Aveiro: <div className="district-container"><h2>Aveiro</h2><AveiroSvg className="district-svg" /></div>,
-        Beja: <div className="district-container"><h2>Beja</h2><BejaSvg className="district-svg"/></div>,
-        Braga: <div className="district-container"><h2>Braga</h2>{selectedConcelho && (<h3>{selectedConcelhoName}</h3>)}<BragaSvg className="district-svg"/></div>,
-        Bragança: <div className="district-container"><h2>Bragança</h2><BragancaSvg className="district-svg"/></div>,
-        CasteloBranco: <div className="district-container"><h2>Castelo Branco</h2><CasteloBrancoSvg className="district-svg"/></div>,
-        Coimbra: <div className="district-container"><h2>Coimbra</h2><CoimbraSvg className="district-svg"/></div>,
-        Évora: <div className="district-container"><h2>Évora</h2><EvoraSvg className="district-svg"/></div>,
-        Faro:<div className="district-container"><h2>Faro</h2><FaroSvg className="district-svg"/></div>,
-        Guarda: <div className="district-container"><h2>Guarda</h2><GuardaSvg className="district-svg"/></div>,
-        Leiria: <div className="district-container"><h2>Leiria</h2><LeiriaSvg className="district-svg"/></div>,
-        Lisboa: <div className="district-container"><h2>Lisboa</h2><LisbonSvg className="district-svg"/></div>,
-        Portalegre: <div className="district-container"><h2>Portalegre</h2><PortalegreSvg className="district-svg"/></div>,
-        Porto: <div className="district-container"><h2>Porto</h2><PortoSvg className="district-svg"/></div>,
-        Santarém: <div className="district-container"><h2>Santarém</h2><SantaremSvg className="district-svg"/></div>,
-        Setúbal: <div className="district-container"><h2>Setúbal</h2><SetubalSvg className="district-svg"/></div>,
-        VianadoCastelo: <div className="district-container"><h2>Viana do Castelo</h2><VianaDoCasteloSvg className="district-svg"/></div>,
-        VilaReal: <div className="district-container"><h2>Vila Real</h2><VilaRealSvg className="district-svg"/></div>,
-        Viseu: <div className="district-container"><h2>Viseu</h2><ViseuSvg className="district-svg"/></div>
+        Aveiro: generateDistrictJSX('Aveiro', AveiroSvg),
+        Beja: generateDistrictJSX('Beja', BejaSvg),
+        Braga: generateDistrictJSX('Braga', BragaSvg),
+        Bragança: generateDistrictJSX('Bragança', BragancaSvg),
+        CasteloBranco: generateDistrictJSX('Castelo Branco', CasteloBrancoSvg),
+        Coimbra: generateDistrictJSX('Coimbra', CoimbraSvg),
+        Évora: generateDistrictJSX('Évora', EvoraSvg),
+        Faro: generateDistrictJSX('Faro', FaroSvg),
+        Guarda: generateDistrictJSX('Guarda', GuardaSvg),
+        Leiria: generateDistrictJSX('Leiria', LeiriaSvg),
+        Lisboa: generateDistrictJSX('Lisboa', LisbonSvg),
+        Portalegre: generateDistrictJSX('Portalegre', PortalegreSvg),
+        Porto: generateDistrictJSX('Porto', PortoSvg),
+        Santarém: generateDistrictJSX('Santarém', SantaremSvg),
+        Setúbal: generateDistrictJSX('Setúbal', SetubalSvg),
+        VianadoCastelo: generateDistrictJSX('Viana do Castelo', VianaDoCasteloSvg),
+        VilaReal: generateDistrictJSX('Vila Real', VilaRealSvg),
+        Viseu: generateDistrictJSX('Viseu', ViseuSvg)
     };
 
     // Função para mostrar a mensagem e atualizar o distrito selecionado
