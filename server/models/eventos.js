@@ -24,11 +24,11 @@ var eventosSchema = new mongoose.Schema({
     descricao: String,
     duracao: Number,
     distrito: String,
+    concelho: String,
     freguesia: String,
     casaEspetaculo: String,
     morada: String,
     promotor: String
-
     //local: [localSchema]
 });
 
