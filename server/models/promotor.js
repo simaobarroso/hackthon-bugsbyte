@@ -1,8 +1,7 @@
 const mongoose = require('mongoose')
 
 var promotorSchema = new mongoose.Schema({
-    _id: Number,
-    nome: String,
+    _id: Number,    
     email: String,
     contacto: String,
     foto: String,

@@ -1,546 +1,128 @@
 [
     {
         "_id": 0,
-        "nome": "Flowers Hawkins",
-        "email": "flowershawkins@mantrix.com",
-        "contacto": "+351 (854) 518-2230",
+        "email": "coimbra@gmail.com",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Ezequiel Valadas"
+        "promotor": "Câmara Municipal de Coimbra"
     },
     {
         "_id": 1,
-        "nome": "Joan Ortega",
-        "email": "joanortega@mantrix.com",
-        "contacto": "+351 (825) 573-3354",
+        "email": "portalegre@hotmail.pt",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Ricardo Araújo Pereira"
+        "promotor": "Câmara Municipal de Portalegre"
     },
     {
         "_id": 2,
-        "nome": "Olivia Lucas",
-        "email": "olivialucas@mantrix.com",
-        "contacto": "+351 (882) 493-3970",
+        "email": "lisboa@hackathon.um",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Ricardo Araújo Pereira"
+        "promotor": "Câmara Municipal de Lisboa"
     },
     {
         "_id": 3,
-        "nome": "Taylor Sandoval",
-        "email": "taylorsandoval@mantrix.com",
-        "contacto": "+351 (893) 447-3003",
+        "email": "faro@hotmail.pt",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Ricardo Araújo Pereira"
+        "promotor": "Câmara Municipal de Faro"
     },
     {
         "_id": 4,
-        "nome": "Maxine Ware",
-        "email": "maxineware@mantrix.com",
-        "contacto": "+351 (935) 521-3545",
+        "email": "guarda@hackathon.um",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Professor Chibanga"
+        "promotor": "Câmara Municipal de Guarda"
     },
     {
         "_id": 5,
-        "nome": "Holden Roberts",
-        "email": "holdenroberts@mantrix.com",
-        "contacto": "+351 (910) 409-3514",
+        "email": "vianadocastelo@hackathon.um",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Comes&Bebes Lda"
+        "promotor": "Câmara Municipal de Viana do Castelo"
     },
     {
         "_id": 6,
-        "nome": "Charlene Mays",
-        "email": "charlenemays@mantrix.com",
-        "contacto": "+351 (932) 440-3420",
+        "email": "leiria@gmail.com",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Uphold"
+        "promotor": "Câmara Municipal de Leiria"
     },
     {
         "_id": 7,
-        "nome": "Sharlene Sargent",
-        "email": "sharlenesargent@mantrix.com",
-        "contacto": "+351 (961) 458-3121",
+        "email": "évora@tinoni.hpt",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Uphold"
+        "promotor": "Câmara Municipal de Évora"
     },
     {
         "_id": 8,
-        "nome": "Joyce Boone",
-        "email": "joyceboone@mantrix.com",
-        "contacto": "+351 (859) 458-2157",
+        "email": "aveiro@hackathon.um",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Ezequiel Valadas"
+        "promotor": "Câmara Municipal de Aveiro"
     },
     {
         "_id": 9,
-        "nome": "Banks Forbes",
-        "email": "banksforbes@mantrix.com",
-        "contacto": "+351 (876) 581-2087",
+        "email": "setúbal@gmail.com",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Câmara Municipal de Vila Nova da Rabona"
+        "promotor": "Câmara Municipal de Setúbal"
     },
     {
         "_id": 10,
-        "nome": "Felicia Barlow",
-        "email": "feliciabarlow@mantrix.com",
-        "contacto": "+351 (984) 473-2880",
+        "email": "porto@hackathon.um",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Uphold"
+        "promotor": "Câmara Municipal de Porto"
     },
     {
         "_id": 11,
-        "nome": "Carole Clay",
-        "email": "caroleclay@mantrix.com",
-        "contacto": "+351 (822) 527-2608",
+        "email": "braga@hackathon.um",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Comes&Bebes Lda"
+        "promotor": "Câmara Municipal de Braga"
     },
     {
         "_id": 12,
-        "nome": "Deena Bennett",
-        "email": "deenabennett@mantrix.com",
-        "contacto": "+351 (925) 552-3955",
+        "email": "vilareal@tinoni.hpt",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Ricardo Araújo Pereira"
+        "promotor": "Câmara Municipal de Vila Real"
     },
     {
         "_id": 13,
-        "nome": "Stout Mcclain",
-        "email": "stoutmcclain@mantrix.com",
-        "contacto": "+351 (868) 472-2579",
+        "email": "castelobranco@gmail.com",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Ezequiel Valadas"
+        "promotor": "Câmara Municipal de Castelo Branco"
     },
     {
         "_id": 14,
-        "nome": "Campbell Horton",
-        "email": "campbellhorton@mantrix.com",
-        "contacto": "+351 (883) 457-3244",
+        "email": "santarém@hotmail.pt",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Câmara Municipal de Vila Nova da Rabona"
+        "promotor": "Câmara Municipal de Santarém"
     },
     {
         "_id": 15,
-        "nome": "Cherie Lott",
-        "email": "cherielott@mantrix.com",
-        "contacto": "+351 (990) 412-3935",
+        "email": "viseu@gmail.com",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Professor Chibanga"
+        "promotor": "Câmara Municipal de Viseu"
     },
     {
         "_id": 16,
-        "nome": "Schneider Sampson",
-        "email": "schneidersampson@mantrix.com",
-        "contacto": "+351 (930) 586-2907",
+        "email": "beja@gmail.com",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Comes&Bebes Lda"
+        "promotor": "Câmara Municipal de Beja"
     },
     {
         "_id": 17,
-        "nome": "Vazquez Woods",
-        "email": "vazquezwoods@mantrix.com",
-        "contacto": "+351 (993) 569-3312",
+        "email": "bragança@hotmail.pt",
+        "contacto": "+315 760 100 120",
         "foto": "http://placehold.it/32x32",
-        "promotor": "Ezequiel Valadas"
-    },
-    {
-        "_id": 18,
-        "nome": "French Horn",
-        "email": "frenchhorn@mantrix.com",
-        "contacto": "+351 (995) 488-2126",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Câmara Municipal de Vila Nova da Rabona"
-    },
-    {
-        "_id": 19,
-        "nome": "Alicia Webster",
-        "email": "aliciawebster@mantrix.com",
-        "contacto": "+351 (894) 473-3320",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Professor Chibanga"
-    },
-    {
-        "_id": 20,
-        "nome": "Gallegos Mayo",
-        "email": "gallegosmayo@mantrix.com",
-        "contacto": "+351 (871) 452-3959",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Professor Chibanga"
-    },
-    {
-        "_id": 21,
-        "nome": "Ernestine Duffy",
-        "email": "ernestineduffy@mantrix.com",
-        "contacto": "+351 (949) 528-3325",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Ricardo Araújo Pereira"
-    },
-    {
-        "_id": 22,
-        "nome": "Hayden Mendoza",
-        "email": "haydenmendoza@mantrix.com",
-        "contacto": "+351 (800) 446-2843",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Ricardo Araújo Pereira"
-    },
-    {
-        "_id": 23,
-        "nome": "Charity Langley",
-        "email": "charitylangley@mantrix.com",
-        "contacto": "+351 (963) 445-3448",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Alberto Oculista"
-    },
-    {
-        "_id": 24,
-        "nome": "Doris Holt",
-        "email": "dorisholt@mantrix.com",
-        "contacto": "+351 (803) 483-2153",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Ricardo Araújo Pereira"
-    },
-    {
-        "_id": 25,
-        "nome": "Nichole Moore",
-        "email": "nicholemoore@mantrix.com",
-        "contacto": "+351 (953) 577-3218",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Alberto Oculista"
-    },
-    {
-        "_id": 26,
-        "nome": "Beasley Salazar",
-        "email": "beasleysalazar@mantrix.com",
-        "contacto": "+351 (941) 463-3956",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Alberto Oculista"
-    },
-    {
-        "_id": 27,
-        "nome": "Colette Hobbs",
-        "email": "colettehobbs@mantrix.com",
-        "contacto": "+351 (996) 459-2526",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Ezequiel Valadas"
-    },
-    {
-        "_id": 28,
-        "nome": "Kinney Allen",
-        "email": "kinneyallen@mantrix.com",
-        "contacto": "+351 (894) 555-2475",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Comes&Bebes Lda"
-    },
-    {
-        "_id": 29,
-        "nome": "Hamilton Cash",
-        "email": "hamiltoncash@mantrix.com",
-        "contacto": "+351 (951) 489-2423",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Alberto Oculista"
-    },
-    {
-        "_id": 30,
-        "nome": "Leach Bernard",
-        "email": "leachbernard@mantrix.com",
-        "contacto": "+351 (872) 415-3583",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Ricardo Araújo Pereira"
-    },
-    {
-        "_id": 31,
-        "nome": "Jennie Shepard",
-        "email": "jennieshepard@mantrix.com",
-        "contacto": "+351 (895) 426-2654",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Câmara Municipal de Vila Nova da Rabona"
-    },
-    {
-        "_id": 32,
-        "nome": "Muriel Curry",
-        "email": "murielcurry@mantrix.com",
-        "contacto": "+351 (960) 504-2582",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Comes&Bebes Lda"
-    },
-    {
-        "_id": 33,
-        "nome": "Alejandra Becker",
-        "email": "alejandrabecker@mantrix.com",
-        "contacto": "+351 (825) 570-2053",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Uphold"
-    },
-    {
-        "_id": 34,
-        "nome": "Paulette Morgan",
-        "email": "paulettemorgan@mantrix.com",
-        "contacto": "+351 (961) 406-3984",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Ezequiel Valadas"
-    },
-    {
-        "_id": 35,
-        "nome": "Abigail Ferguson",
-        "email": "abigailferguson@mantrix.com",
-        "contacto": "+351 (971) 498-2045",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Ezequiel Valadas"
-    },
-    {
-        "_id": 36,
-        "nome": "Small Riddle",
-        "email": "smallriddle@mantrix.com",
-        "contacto": "+351 (908) 475-2119",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Ezequiel Valadas"
-    },
-    {
-        "_id": 37,
-        "nome": "Lou Rowe",
-        "email": "lourowe@mantrix.com",
-        "contacto": "+351 (955) 514-2782",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Comes&Bebes Lda"
-    },
-    {
-        "_id": 38,
-        "nome": "Ryan Workman",
-        "email": "ryanworkman@mantrix.com",
-        "contacto": "+351 (979) 479-2889",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Os Bananas Split"
-    },
-    {
-        "_id": 39,
-        "nome": "Josefina Floyd",
-        "email": "josefinafloyd@mantrix.com",
-        "contacto": "+351 (972) 529-3968",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Câmara Municipal de Vila Nova da Rabona"
-    },
-    {
-        "_id": 40,
-        "nome": "Sherrie Boyd",
-        "email": "sherrieboyd@mantrix.com",
-        "contacto": "+351 (962) 563-2619",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Professor Chibanga"
-    },
-    {
-        "_id": 41,
-        "nome": "Brenda Hunt",
-        "email": "brendahunt@mantrix.com",
-        "contacto": "+351 (811) 593-3678",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Ricardo Araújo Pereira"
-    },
-    {
-        "_id": 42,
-        "nome": "Rich Welch",
-        "email": "richwelch@mantrix.com",
-        "contacto": "+351 (934) 402-3795",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Câmara Municipal de Vila Nova da Rabona"
-    },
-    {
-        "_id": 43,
-        "nome": "Holland Fry",
-        "email": "hollandfry@mantrix.com",
-        "contacto": "+351 (924) 466-3728",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Os Bananas Split"
-    },
-    {
-        "_id": 44,
-        "nome": "Gilmore Waters",
-        "email": "gilmorewaters@mantrix.com",
-        "contacto": "+351 (953) 590-3384",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Câmara Municipal de Vila Nova da Rabona"
-    },
-    {
-        "_id": 45,
-        "nome": "Jeri Vega",
-        "email": "jerivega@mantrix.com",
-        "contacto": "+351 (883) 450-2224",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Professor Chibanga"
-    },
-    {
-        "_id": 46,
-        "nome": "Alberta Benjamin",
-        "email": "albertabenjamin@mantrix.com",
-        "contacto": "+351 (864) 444-3480",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Câmara Municipal de Vila Nova da Rabona"
-    },
-    {
-        "_id": 47,
-        "nome": "Shelton Durham",
-        "email": "sheltondurham@mantrix.com",
-        "contacto": "+351 (849) 437-2824",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Comes&Bebes Lda"
-    },
-    {
-        "_id": 48,
-        "nome": "Elvia Harding",
-        "email": "elviaharding@mantrix.com",
-        "contacto": "+351 (987) 559-2904",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Os Bananas Split"
-    },
-    {
-        "_id": 49,
-        "nome": "Gabrielle Boyle",
-        "email": "gabrielleboyle@mantrix.com",
-        "contacto": "+351 (983) 443-2212",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Alberto Oculista"
-    },
-    {
-        "_id": 50,
-        "nome": "Carolina Hines",
-        "email": "carolinahines@mantrix.com",
-        "contacto": "+351 (991) 600-2690",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Uphold"
-    },
-    {
-        "_id": 51,
-        "nome": "Miriam Wells",
-        "email": "miriamwells@mantrix.com",
-        "contacto": "+351 (924) 471-3142",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Os Bananas Split"
-    },
-    {
-        "_id": 52,
-        "nome": "Russo Perez",
-        "email": "russoperez@mantrix.com",
-        "contacto": "+351 (824) 458-3504",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Câmara Municipal de Vila Nova da Rabona"
-    },
-    {
-        "_id": 53,
-        "nome": "Livingston Roman",
-        "email": "livingstonroman@mantrix.com",
-        "contacto": "+351 (822) 444-3878",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Uphold"
-    },
-    {
-        "_id": 54,
-        "nome": "Patrice Mckee",
-        "email": "patricemckee@mantrix.com",
-        "contacto": "+351 (894) 584-3046",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Professor Chibanga"
-    },
-    {
-        "_id": 55,
-        "nome": "Wolf Guerra",
-        "email": "wolfguerra@mantrix.com",
-        "contacto": "+351 (958) 439-2527",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Alberto Oculista"
-    },
-    {
-        "_id": 56,
-        "nome": "Sparks Talley",
-        "email": "sparkstalley@mantrix.com",
-        "contacto": "+351 (850) 490-2139",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Os Bananas Split"
-    },
-    {
-        "_id": 57,
-        "nome": "Harrell Rivas",
-        "email": "harrellrivas@mantrix.com",
-        "contacto": "+351 (985) 573-2995",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Os Bananas Split"
-    },
-    {
-        "_id": 58,
-        "nome": "Aguilar Wong",
-        "email": "aguilarwong@mantrix.com",
-        "contacto": "+351 (847) 415-3982",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Alberto Oculista"
-    },
-    {
-        "_id": 59,
-        "nome": "Goodman Daugherty",
-        "email": "goodmandaugherty@mantrix.com",
-        "contacto": "+351 (927) 487-3396",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Câmara Municipal de Vila Nova da Rabona"
-    },
-    {
-        "_id": 60,
-        "nome": "Joyce Prince",
-        "email": "joyceprince@mantrix.com",
-        "contacto": "+351 (925) 418-2445",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Os Bananas Split"
-    },
-    {
-        "_id": 61,
-        "nome": "Robertson Fitzgerald",
-        "email": "robertsonfitzgerald@mantrix.com",
-        "contacto": "+351 (889) 597-2214",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Professor Chibanga"
-    },
-    {
-        "_id": 62,
-        "nome": "Mcfarland Briggs",
-        "email": "mcfarlandbriggs@mantrix.com",
-        "contacto": "+351 (923) 467-2241",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Alberto Oculista"
-    },
-    {
-        "_id": 63,
-        "nome": "Keisha Reynolds",
-        "email": "keishareynolds@mantrix.com",
-        "contacto": "+351 (849) 597-2588",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Uphold"
-    },
-    {
-        "_id": 64,
-        "nome": "Farley Suarez",
-        "email": "farleysuarez@mantrix.com",
-        "contacto": "+351 (916) 540-2662",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Ricardo Araújo Pereira"
-    },
-    {
-        "_id": 65,
-        "nome": "Cruz Harvey",
-        "email": "cruzharvey@mantrix.com",
-        "contacto": "+351 (874) 558-2937",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Ezequiel Valadas"
-    },
-    {
-        "_id": 66,
-        "nome": "Lana Mcdowell",
-        "email": "lanamcdowell@mantrix.com",
-        "contacto": "+351 (830) 414-2132",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Alberto Oculista"
-    },
-    {
-        "_id": 67,
-        "nome": "Ewing Morris",
-        "email": "ewingmorris@mantrix.com",
-        "contacto": "+351 (858) 440-2233",
-        "foto": "http://placehold.it/32x32",
-        "promotor": "Câmara Municipal de Vila Nova da Rabona"
+        "promotor": "Câmara Municipal de Bragança"
     }
 ]
