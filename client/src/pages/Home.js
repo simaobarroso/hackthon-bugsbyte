@@ -44,7 +44,7 @@ const Home = () => {
                     throw new Error('Erro ao carregar eventos');
                 }
                 const eventosData = await response.json();
-                console.log(eventosData)
+                //console.log(eventosData)
                 setFetchData(eventosData);
             } catch (error) {
                 console.error(error);
@@ -91,7 +91,7 @@ const Home = () => {
     const showMessage = (text, district) => {
         setMessage(text);
         district = district.replace(/\s+/g, '');
-        console.log(district)
+        //console.log(district)
         setSelectedDistrict(district);
     };
 
@@ -133,7 +133,7 @@ const Home = () => {
                     let concelhoEncoded = event.target.getAttribute('class');
                     let concelho = decodeUnicodeEscape(concelhoEncoded);
                     messageText = `${selectedDistrict} (Distrito) e ${concelho} (Concelho) selecionado!`;
-                    console.log(concelho)
+                    //console.log(concelho)
 
                     if (selectedConcelho) {
                         selectedConcelho.classList.remove('selected')
@@ -166,7 +166,7 @@ const Home = () => {
         let newCategoria = document.getElementById(categoria);
         newCategoria.classList.add('selectedCategoria')
         setSelectedCategoria(categoria);
-        console.log("Categoria selecionada:", categoria);
+        // console.log("Categoria selecionada:", categoria);
         // Aqui você pode fazer o que precisa com a categoria selecionada
     }
 
@@ -184,16 +184,16 @@ const Home = () => {
             {/* Mensagem à direita caso distrito esteja selecionado*/}
             {selectedDistrict && (
                 <div className="semi-container">
-                    <div class="search-container">
+                    <div className="search-container">
                         <input type="text" id="searchInput" onChange={search} placeholder="Digite sua pesquisa aqui..." />
                     </div>
-                    <button id="Todas" class="selectedCategoria" onClick={() => selectCategoria('Todas')}>Todas</button>
+                    <button id="Todas" className="selectedCategoria" onClick={() => selectCategoria('Todas')}>Todas</button>
                     <button id="Desporto" onClick={() => selectCategoria('Desporto')}>Desporto</button>
                     <button id="Entretenimento" onClick={() => selectCategoria('Entretenimento')}>Entretenimento</button>
                     <p>{message}</p>
                     <p>{messageSearch}</p>
                     <p>{selectedCategoria}</p>
-                    {fetchData && (<p>fetchData</p>)}
+                    {fetchData && (CulturalEventsScreen(fetchData))}
                     <button onClick={closeMessage}>Fechar</button>
                 </div>
             )}

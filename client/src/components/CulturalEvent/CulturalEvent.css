@@ -1,48 +1,40 @@
-.event-container {
+.event-card {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    background-color: #f0f0f0;
-    padding: 20px; /* Aumenta o espaçamento interno */
-    margin-bottom: 20px;
+    flex-direction: column;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
-    max-width: 600px; /* Aumenta a largura máxima */
-    width: 100%; /* Para garantir que a caixa seja responsiva */
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
+    overflow: hidden;
+    width: 90%;
+    margin: 20px auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+
+    /* Define a altura como metade da largura */
+    height: 200px; /* 45% da largura da viewport */
 }
 
-.left-container {
-    flex: 1;
-    margin-right: 20px; /* Adiciona espaçamento entre os contêineres */
-}
-
-.right-container {
-    flex: 0 0 auto; /* O contêiner da direita não deve crescer */
-}
-
-.title-container {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.details-container {
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    color: white;
+  }
+  
+  .info-icons {
     display: flex;
-    flex-direction: column; /* Alinha os detalhes verticalmente */
-}
-
-.detail {
+    flex-wrap: wrap;
+  }
+  
+  .info-icon {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
-}
-
-.additional-info-container {
-    margin-top: 20px;
-}
-
-.photo {
-    max-width: 100%;
-    border-radius: 8px;
-}
+    margin-right: 20px;
+  }
+  
+  .info-icon span {
+    margin-left: 5px;
+  }
+  
