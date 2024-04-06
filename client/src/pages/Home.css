@@ -22,10 +22,12 @@ h2 {
     margin-bottom: 20px;
 }
 
-.semi-container{
-    width:50%;
-    background-color: red
+.semi-container {
+    width: 50%;
+    background-color: red;
+    overflow-y: auto; /* Adiciona rolagem vertical quando necessário */
 }
+
 
 .map-svg {
     fill: #ccc;

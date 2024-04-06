@@ -1,0 +1,48 @@
+.event-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 20px; /* Aumenta o espaçamento interno */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
+    max-width: 600px; /* Aumenta a largura máxima */
+    width: 100%; /* Para garantir que a caixa seja responsiva */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+}
+
+.left-container {
+    flex: 1;
+    margin-right: 20px; /* Adiciona espaçamento entre os contêineres */
+}
+
+.right-container {
+    flex: 0 0 auto; /* O contêiner da direita não deve crescer */
+}
+
+.title-container {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column; /* Alinha os detalhes verticalmente */
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.additional-info-container {
+    margin-top: 20px;
+}
+
+.photo {
+    max-width: 100%;
+    border-radius: 8px;
+}
