@@ -1,5 +1,5 @@
 import json
-from random import randint
+from random import randint,choices
 
 
 portuguese_districts = {
@@ -26,9 +26,25 @@ portuguese_districts = {
 # Example usage:
 print(portuguese_districts["Lisboa"])
 
+def genData():
+    diaSemana = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo"] 
+    diaSemana = diaSemana[randint(0,6)]
+    dia = randint(1, 31)
+    mes = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+    mes = mes[randint(0,11)]
+    Hora = f"{choices([10,11,12,13,14,15,16,17,18,19,20,21,22,23],[10,11,12,13,14,15,16,17,18,19,50,40,30,12])[0]}h{choices([00,15,30,45],[1,2,2,4])[0]}min" 
+    return {
+        "diaDaSemana": diaSemana,
+        "dia": dia,
+        "mes": mes,
+        "ano" : 2024,
+        "hora": Hora
+    }
+
+
 
 # Load JSON data from file
-with open('data.json', 'r') as json_file:
+with open('eventos.json', 'r') as json_file:
     data = json.load(json_file)
 
 # Iterate through each element in the array
@@ -38,7 +54,10 @@ for item in data:
     item['concelho'] = portuguese_districts[item['distrito']][a]
     # Access the 'distrito' key for each item
     #print(item['distrito'])
-with open('modified_data.json', 'w', encoding='utf-8') as json_file:
+    item['data'] = genData()
+
+
+with open('eventos.json', 'w', encoding='utf-8') as json_file:
     json.dump(data, json_file,ensure_ascii=False, indent=4)
 
 
