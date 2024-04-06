@@ -41,10 +41,10 @@ const CulturalEvent = ({ event }) => {
 
     let d;
     if (data.dia < 10){
-        d = `0${data.dia}\\${month}\\${data.ano} (${data.diaDaSemana})`
+        d = `0${data.dia}\/${month}\/${data.ano} (${data.diaDaSemana})`
     }
     else {
-        d = `${data.dia}\\${month}\\${data.ano} (${data.diaDaSemana})`
+        d = `${data.dia}\/${month}\/${data.ano} (${data.diaDaSemana})`
     }
 
     const foto = "https://upload.wikimedia.org/wikipedia/commons/1/12/Museum_Benfica_dome.JPG"
@@ -61,7 +61,7 @@ const CulturalEvent = ({ event }) => {
               </div>
               <div className="info-icon">
                 <RiMapPin2Fill size={20} />
-                <span>{distrito}, {concelho}</span>
+                <span>{concelho},{distrito}</span>
               </div>
               <div className="info-icon">
                 <RiTicket2Fill size={20} />
