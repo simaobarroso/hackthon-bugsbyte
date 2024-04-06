@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
 import './Home.css'; // Importar arquivo CSS
-import { ReactComponent as PortugalMap } from '../assets/portugal_map.svg'; // Importar arquivo SVG do mapa de Portugal
-import { ReactComponent as AveiroSvg } from '../assets/aveiro.svg';
-import { ReactComponent as BejaSvg } from '../assets/beja.svg';
-import { ReactComponent as BragaSvg } from '../assets/braga.svg';
-import { ReactComponent as BragancaSvg } from '../assets/braganca.svg';
-import { ReactComponent as CasteloBrancoSvg } from '../assets/castelo branco.svg';
-import { ReactComponent as CoimbraSvg } from '../assets/coimbra.svg';
-import { ReactComponent as EvoraSvg } from '../assets/evora.svg';
-import { ReactComponent as FaroSvg } from '../assets/faro.svg';
-import { ReactComponent as GuardaSvg } from '../assets/guarda.svg';
-import { ReactComponent as LeiriaSvg } from '../assets/leiria.svg';
-import { ReactComponent as LisbonSvg } from '../assets/lisboa.svg';
-import { ReactComponent as PortalegreSvg } from '../assets/portalegre.svg';
-import { ReactComponent as PortoSvg } from '../assets/porto.svg';
-import { ReactComponent as SantaremSvg } from '../assets/santarem.svg';
-import { ReactComponent as SetubalSvg } from '../assets/setubal.svg';
+import { ReactComponent as PortugalMap }       from '../assets/portugal_map.svg'; // Importar arquivo SVG do mapa de Portugal
+import { ReactComponent as AveiroSvg }         from '../assets/aveiro.svg';
+import { ReactComponent as BejaSvg }           from '../assets/beja.svg';
+import { ReactComponent as BragaSvg }          from '../assets/braga.svg';
+import { ReactComponent as BragancaSvg }       from '../assets/braganca.svg';
+import { ReactComponent as CasteloBrancoSvg }  from '../assets/castelo branco.svg';
+import { ReactComponent as CoimbraSvg }        from '../assets/coimbra.svg';
+import { ReactComponent as EvoraSvg }          from '../assets/evora.svg';
+import { ReactComponent as FaroSvg }           from '../assets/faro.svg';
+import { ReactComponent as GuardaSvg }         from '../assets/guarda.svg';
+import { ReactComponent as LeiriaSvg }         from '../assets/leiria.svg';
+import { ReactComponent as LisbonSvg }         from '../assets/lisboa.svg';
+import { ReactComponent as PortalegreSvg }     from '../assets/portalegre.svg';
+import { ReactComponent as PortoSvg }          from '../assets/porto.svg';
+import { ReactComponent as SantaremSvg }       from '../assets/santarem.svg';
+import { ReactComponent as SetubalSvg }        from '../assets/setubal.svg';
 import { ReactComponent as VianaDoCasteloSvg } from '../assets/viana do castelo.svg';
-import { ReactComponent as VilaRealSvg } from '../assets/vila real.svg';
-import { ReactComponent as ViseuSvg } from '../assets/viseu.svg';
+import { ReactComponent as VilaRealSvg }       from '../assets/vila real.svg';
+import { ReactComponent as ViseuSvg }          from '../assets/viseu.svg';
 
 const Home = () => {
     // Estado para controlar a exibição da mensagem, a classe de animação e o SVG do distrito
-    const [message, setMessage] = useState(null);
-    const [messageSearch, setMessageSearch] = useState(null);
-    const [selectedDistrict, setSelectedDistrict] = useState(null);
-    const [selectedConcelho, setSelectedConcelho] = useState(null);
+    const [message             , setMessage             ] = useState(null);
+    const [messageSearch       , setMessageSearch       ] = useState(null);
+    const [selectedDistrict    , setSelectedDistrict    ] = useState(null);
+    const [selectedConcelho    , setSelectedConcelho    ] = useState(null);
     const [selectedConcelhoName, setSelectedConcelhoName] = useState(null);
-    const [selectedCategoria, setSelectedCategoria] = useState('Todas');
+    const [selectedCategoria   , setSelectedCategoria   ] = useState('Todas');
 
     const generateDistrictJSX = (districtName, SvgComponent) => (
         <div className="district-container">
@@ -38,24 +38,24 @@ const Home = () => {
     );
     
     const districtMap = {
-        Aveiro: generateDistrictJSX('Aveiro', AveiroSvg),
-        Beja: generateDistrictJSX('Beja', BejaSvg),
-        Braga: generateDistrictJSX('Braga', BragaSvg),
-        Bragança: generateDistrictJSX('Bragança', BragancaSvg),
-        CasteloBranco: generateDistrictJSX('Castelo Branco', CasteloBrancoSvg),
-        Coimbra: generateDistrictJSX('Coimbra', CoimbraSvg),
-        Évora: generateDistrictJSX('Évora', EvoraSvg),
-        Faro: generateDistrictJSX('Faro', FaroSvg),
-        Guarda: generateDistrictJSX('Guarda', GuardaSvg),
-        Leiria: generateDistrictJSX('Leiria', LeiriaSvg),
-        Lisboa: generateDistrictJSX('Lisboa', LisbonSvg),
-        Portalegre: generateDistrictJSX('Portalegre', PortalegreSvg),
-        Porto: generateDistrictJSX('Porto', PortoSvg),
-        Santarém: generateDistrictJSX('Santarém', SantaremSvg),
-        Setúbal: generateDistrictJSX('Setúbal', SetubalSvg),
-        VianadoCastelo: generateDistrictJSX('Viana do Castelo', VianaDoCasteloSvg),
-        VilaReal: generateDistrictJSX('Vila Real', VilaRealSvg),
-        Viseu: generateDistrictJSX('Viseu', ViseuSvg)
+        Aveiro         : generateDistrictJSX('Aveiro'          , AveiroSvg),
+        Beja           : generateDistrictJSX('Beja'            , BejaSvg),
+        Braga          : generateDistrictJSX('Braga'           , BragaSvg),
+        Bragança       : generateDistrictJSX('Bragança'        , BragancaSvg),
+        CasteloBranco  : generateDistrictJSX('Castelo Branco'  , CasteloBrancoSvg),
+        Coimbra        : generateDistrictJSX('Coimbra'         , CoimbraSvg),
+        Évora          : generateDistrictJSX('Évora'           , EvoraSvg),
+        Faro           : generateDistrictJSX('Faro'            , FaroSvg),
+        Guarda         : generateDistrictJSX('Guarda'          , GuardaSvg),
+        Leiria         : generateDistrictJSX('Leiria'          , LeiriaSvg),
+        Lisboa         : generateDistrictJSX('Lisboa'          , LisbonSvg),
+        Portalegre     : generateDistrictJSX('Portalegre'      , PortalegreSvg),
+        Porto          : generateDistrictJSX('Porto'           , PortoSvg),
+        Santarém       : generateDistrictJSX('Santarém'        , SantaremSvg),
+        Setúbal        : generateDistrictJSX('Setúbal'         , SetubalSvg),
+        VianadoCastelo : generateDistrictJSX('Viana do Castelo', VianaDoCasteloSvg),
+        VilaReal       : generateDistrictJSX('Vila Real'       , VilaRealSvg),
+        Viseu          : generateDistrictJSX('Viseu'           , ViseuSvg)
     };
 
     // Função para mostrar a mensagem e atualizar o distrito selecionado
