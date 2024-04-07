@@ -22,7 +22,6 @@ import { ReactComponent as ViseuSvg } from '../assets/viseu.svg';
 
 import CulturalEventsScreen from '../components/CulturalEventsScreen/CulturalEventsScreen';
 
-
 const Home = () => {
     // Estado para controlar a exibição da mensagem, a classe de animação e o SVG do distrito
     const [message, setMessage] = useState(null);
@@ -221,11 +220,18 @@ const Home = () => {
                 )}
             </div>
 
+            {!selectedDistrict && (
+                <div className="message-container">
+     
+                    <p className="message">Bem-vindo à nossa plataforma de eventos culturais! <br></br>O próximo passo é selecionar um distrito para explorar os seus eventos.</p>
+                </div>
+            )}
+
             {/* Mensagem à direita caso distrito esteja selecionado*/}
             {selectedDistrict && (
                 <div className="semi-container">
                     <div className="search-container">
-                        <input type="text" id="searchInput" onChange={search} placeholder="Digite sua pesquisa aqui..." />
+                        <input type="text" id="searchInput" onChange={search} placeholder="Escreva a sua pesquisa aqui..." />
                     </div>
                     <div className="date">
                         <input type="date" id="dateInput" onChange={dateFilter} />
