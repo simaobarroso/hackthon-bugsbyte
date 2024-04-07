@@ -1,44 +1,73 @@
 .event-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    width: 90%;
-    margin: 20px auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
-
-    /* Define a altura como metade da largura */
-    height: 200px; /* 45% da largura da viewport */
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  transition: background-color 0.3s ease; /* Adicionando uma transição suave */
 }
 
-  
+.event-card:hover {
+  background-color: rgba(255, 255, 255, 0.8) ; /* Escurecendo a cor ao passar o mouse */
+  cursor: pointer;
+}
+
+.event-card:hover .photo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* Sobreposição escura na imagem */
+}
+
+.photo {
+  position: relative; /* Garantindo que a pseudo-elemento ::before fique posicionado em relação a este elemento */
+  flex: 0 0 220px;
+  height: 220px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.photo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Sobreposição inicialmente transparente */
+}
+
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Para centralizar verticalmente */
-    align-items: center; /* Para centralizar horizontalmente */
-    padding: 10px;
-    color: white;
-  }
-  
-  .info-icons {
-    display: flex;
-    justify-content: space-between; /* Isso distribuirá os ícones uniformemente */
-    width: 100%; /* Para ocupar toda a largura */
-    margin-top: 10px; /* Ajuste conforme necessário */
-  }
-  
-  .info-icon {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-  }
-  
-  .info-icon span {
-    margin-left: 5px;
-  }
-  
+  flex: 1;
+  padding: 10px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.info-table {
+  width: 100%;
+}
+
+.info-icon {
+  width: 30px;
+  text-align: center;
+}
+
+.info-icon svg {
+  vertical-align: middle;
+}
+
+.info-table td {
+  text-align: left; /* Alinhar elementos da segunda coluna à esquerda */
+}
+
+h2, h5 {
+  margin: 0;
+}

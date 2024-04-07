@@ -50,36 +50,31 @@ const CulturalEvent = ({ event }) => {
     const foto = "https://upload.wikimedia.org/wikipedia/commons/1/12/Museum_Benfica_dome.JPG"
 
     return (
-        <div className="event-card" style={{ backgroundImage: `url(${foto})` }}>
-          <div className="content">
+          <div class="event-card">
+    <div class="photo" style={{ backgroundImage: `url(${foto})` }}></div>
+    <div class="content">
+        <div class="header">
             <h2>{titulo}</h2>
-            <h3>{subtitulo}</h3>
-            <div className="info-icons">
-              <div className="info-icon">
-                <RiCalendarEventFill size={20} />
-                <span>{d}</span>
-              </div>
-              <div className="info-icon">
-                <RiMapPin2Fill size={20} />
-                <span>{concelho},{distrito}</span>
-              </div>
-              <div className="info-icon">
-                <RiTicket2Fill size={20} />
-                <span>{bilheteira}</span>
-              </div>
-              <div className="info-icon">
-                <RiSunCloudyLine size={20} />
-                <span>{meteorologia}</span>
-              </div>
-            </div>
-            <p>Lotação: {lotacao}</p>
-            <p>Duração: {duracao}</p>
-            <p>Freguesia: {freguesia}</p>
-            <p>Casa de Espetáculo: {casaEspetaculo}</p>
-            <p>Morada: {morada}</p>
-            <p>Promotor: {promotor}</p>
-          </div>
+            <h5>{subtitulo}</h5>
         </div>
+        <table class="info-table">
+            <tbody>
+                <tr>
+                    <td class="info-icon"><RiCalendarEventFill size={20} /></td>
+                    <td>{d}</td>
+                </tr>
+                <tr>
+                    <td class="info-icon"><RiMapPin2Fill size={20} /></td>
+                    <td>{concelho}, {distrito}</td>
+                </tr>
+                <tr>
+                    <td class="info-icon"><RiSunCloudyLine size={20} /></td>
+                    <td>{meteorologia}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
       );
 };
 

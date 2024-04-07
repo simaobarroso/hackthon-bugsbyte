@@ -31,6 +31,7 @@ const Home = () => {
     const [selectedConcelho, setSelectedConcelho] = useState(null);
     const [selectedConcelhoName, setSelectedConcelhoName] = useState(null);
     const [selectedCategoria, setSelectedCategoria] = useState('Todas');
+    const [categorias, setCategorias] = useState(null);
     
     // Change it to null by default
     
@@ -39,7 +40,7 @@ const Home = () => {
     useEffect(() => {
         const getEventos = async () => {
             try {
-                const response = await fetch(`/api/eventos/outros?distrito=${selectedDistrict}&concelho=${selectedConcelhoName}`);
+                const response = await fetch(`/api/eventos/outros?distrito=${selectedDistrict}&concelho=${selectedConcelhoName}&categorias=${selectedCategoria}`);
                 if (!response.ok) {
                     throw new Error('Erro ao carregar eventos');
                 }
@@ -52,10 +53,30 @@ const Home = () => {
             }
         };
         // Chama getEventos apenas se selectedDistrict não for nulo
-        if (selectedDistrict || selectedConcelhoName) {
+        if (selectedDistrict || selectedConcelhoName || selectedCategoria) {
             getEventos();
         }
-    }, [selectedDistrict, selectedConcelhoName]); // Dispara o useEffect apenas quando selectedDistrict mudar
+    }, [selectedDistrict, selectedConcelhoName, selectedCategoria]); // Dispara o useEffect apenas quando selectedDistrict mudar
+
+
+    useEffect(() => {
+        const getCategorias = async () => {
+            try {
+                const response = await fetch("/api/eventos/diferentesCategorias");
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar eventos');
+                }
+                const categoriasData = await response.json();
+                //console.log(categoriasData);
+                setCategorias(categoriasData);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        getCategorias(); // Chamada à API será feita apenas uma vez
+
+    }, []); // Lista de dependências vazia indica que o efeito só deve ser executado uma vez
 
 
     const generateDistrictJSX = (districtName, SvgComponent) => (
@@ -190,14 +211,13 @@ const Home = () => {
                     <div>
                         <ul className="categorias">
                             <li>
-                            <a id="Todas" tabindex="0" autofocus onClick={() => selectCategoria('Todas')}>Todas</a>
+                                <a id="Todas" tabIndex="0" autoFocus onClick={() => selectCategoria('Todas')}>Todas</a>
                             </li>
-                            <li>
-                            <a id="Desporto" tabindex="0" onClick={() => selectCategoria('Desporto')}>Desporto</a>
-                            </li>
-                            <li>
-                            <a id="Entretenimento" tabindex="0" onClick={() => selectCategoria('Entretenimento')}>Entretenimento</a>
-                            </li>
+                            {categorias.map((categoria, index) => (
+                                <li key={index}>
+                                    <a id={categoria} tabIndex="0" onClick={() => selectCategoria(categoria)}>{categoria}</a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     {fetchData && (CulturalEventsScreen(fetchData))}
