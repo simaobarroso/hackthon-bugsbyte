@@ -124,12 +124,15 @@ app.get("/api/eventos/outros", (req, res) => {
   }
 
   if (req.query.search != null && req.query.search != "null") {
+    console.log(req.query.search)
+    s = {"$or": [
+          { "titulo": { "$regex": req.query.search.toString(), "$options": "i" } },
+          { "subtitulo": { "$regex": req.query.search.toString(), "$options": "i" } }
+    ]}
     
-    s = {$text: { $search: req.query.search }}
 
     mergeObjects(q,s);
   }
-
 
 
   console.log(q);
