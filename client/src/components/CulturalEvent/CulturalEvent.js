@@ -1,6 +1,7 @@
 import React from 'react';
 import { RiCalendarEventFill, RiMapPin2Fill, RiImageAddLine, RiSunCloudyLine, RiTicket2Fill } from 'react-icons/ri'; // Import React Icons
 import './CulturalEvent.css'; // Import CSS file for styling
+import { Link } from 'react-router-dom';
 
 const CulturalEvent = ({ event }) => {
     // Valores padrão para os parâmetros do evento, caso não estejam presentes
@@ -47,34 +48,36 @@ const CulturalEvent = ({ event }) => {
         d = `${data.hora}, ${data.dia}\/${month}\/${data.ano} (${data.diaDaSemana})`
     }
 
-    const foto = "https://upload.wikimedia.org/wikipedia/commons/1/12/Museum_Benfica_dome.JPG"
+    const foto = "https://alumni.uminho.pt/pt/news/PublishingImages/universidade-do-minho-1140x641.jpg"
 
     return (
-          <div class="event-card">
-    <div class="photo" style={{ backgroundImage: `url(${foto})` }}></div>
-    <div class="content">
-        <div class="header">
-            <h2>{titulo}</h2>
-            <h5>{subtitulo}</h5>
+      <Link to={`/evento/${event._id}`}>
+      <div class="event-card">
+        <div class="photo" style={{ backgroundImage: `url(${foto})` }}></div>
+        <div class="content">
+            <div class="header">
+                <h2>{titulo}</h2>
+                <h5>{subtitulo}</h5>
+            </div>
+            <table class="info-table">
+                <tbody>
+                    <tr>
+                        <td class="info-icon"><RiCalendarEventFill size={20} /></td>
+                        <td>{d}</td>
+                    </tr>
+                    <tr>
+                        <td class="info-icon"><RiMapPin2Fill size={20} /></td>
+                        <td>{concelho}, {distrito}</td>
+                    </tr>
+                    <tr>
+                        <td class="info-icon"><RiSunCloudyLine size={20} /></td>
+                        <td>{meteorologia}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <table class="info-table">
-            <tbody>
-                <tr>
-                    <td class="info-icon"><RiCalendarEventFill size={20} /></td>
-                    <td>{d}</td>
-                </tr>
-                <tr>
-                    <td class="info-icon"><RiMapPin2Fill size={20} /></td>
-                    <td>{concelho}, {distrito}</td>
-                </tr>
-                <tr>
-                    <td class="info-icon"><RiSunCloudyLine size={20} /></td>
-                    <td>{meteorologia}</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
-</div>
+</Link>
       );
 };
 
