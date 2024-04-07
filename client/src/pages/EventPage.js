@@ -41,14 +41,18 @@ function EventPage() {
       <h1 className="w3-center">{titulo}</h1>
       <h3 className="w3-center">{subtitulo}</h3>
       <div className="w3-row">
+        <div className="w3-center">
+          <img src={foto} alt="Foto" className="w3-image" style={{ maxWidth: '600px', maxHeight: '600px' }} />
+        </div>
+
+      </div>
+      <div className="w3-row">
         <div className="w3-half">
           <p><strong>Data:</strong> {data.diaDaSemana}, {data.dia} de {data.mes} de {data.ano}, às {data.hora}</p>
           <p><strong>Localização:</strong> {distrito}, {concelho}</p>
           <p><strong>Bilheteira:</strong> {bilheteira}</p>
           <p><strong>Meteorologia:</strong> {meteorologia}</p>
           <p><strong>Descrição:</strong> {descricao}</p>
-        </div>
-        <div className="w3-half">
           <p><strong>Lotação:</strong> {lotacao}</p>
           <p><strong>Duração:</strong> {duracao}</p>
           <p><strong>Freguesia:</strong> {freguesia}</p>
@@ -57,11 +61,7 @@ function EventPage() {
           <p><strong>Promotor:</strong> {promotor}</p>
         </div>
       </div>
-      <div className="w3-row">
-        <div className="w3-half">
-          <img src={foto} alt="Foto" className="w3-image" />
-        </div>
-      </div>
+      
     </div>
   );
 }
