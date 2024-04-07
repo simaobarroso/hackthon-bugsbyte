@@ -57,7 +57,7 @@ const CulturalEvent = ({ event }) => {
         <div class="content">
             <div class="header">
                 <h2>{titulo}</h2>
-                <h5>{subtitulo}</h5>
+                <h7>{subtitulo}</h7>
             </div>
             <table class="info-table">
                 <tbody>
