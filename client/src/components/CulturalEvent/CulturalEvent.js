@@ -56,8 +56,8 @@ const CulturalEvent = ({ event }) => {
         <div class="photo" style={{ backgroundImage: `url(${foto})` }}></div>
         <div class="content">
             <div class="header">
-                <h2>{titulo}</h2>
-                <h7>{subtitulo}</h7>
+                <h3>{titulo}</h3>
+                <h6>{subtitulo}</h6>
             </div>
             <table class="info-table">
                 <tbody>

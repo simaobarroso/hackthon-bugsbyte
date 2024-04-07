@@ -21,6 +21,8 @@ import { ReactComponent as VilaRealSvg } from '../assets/vila real.svg';
 import { ReactComponent as ViseuSvg } from '../assets/viseu.svg';
 
 import CulturalEventsScreen from '../components/CulturalEventsScreen/CulturalEventsScreen';
+import logo from "../assets/logo.png"
+
 
 const Home = () => {
     // Estado para controlar a exibição da mensagem, a classe de animação e o SVG do distrito
@@ -222,8 +224,8 @@ const Home = () => {
 
             {!selectedDistrict && (
                 <div className="message-container">
-     
-                    <p className="message">Bem-vindo à nossa plataforma de eventos culturais! <br></br>O próximo passo é selecionar um distrito para explorar os seus eventos.</p>
+                     <img src={logo} alt="Logo Culturum" />
+                    <p className="message">Bem-vindo à CulturUM, uma plataforma de eventos culturais! <br></br>O próximo passo é selecionar um distrito para explorar os seus eventos.</p>
                 </div>
             )}
 
