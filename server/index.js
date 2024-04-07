@@ -66,6 +66,7 @@ app.get("/api/eventos/outros", (req, res) => {
   var d1 = {};
   var d2 = {};
   var d3 = {};
+  var s = {};
 
   if (req.query.distrito != null && req.query.distrito != "null" ) {
     if (req.query.distrito == "VianadoCastelo") {
@@ -118,9 +119,19 @@ app.get("/api/eventos/outros", (req, res) => {
     q._id = req.query.id;
   }
 
-  if (req.query.categorias != null && req.query.categorias != "null") {
+  if (req.query.categorias != null && req.query.categorias != "null" && req.query.categorias != "Todas") {
     q.categorias = req.query.categorias;
   }
+
+  if (req.query.search != null && req.query.search != "null") {
+    
+    s = {$text: { $search: req.query.search }}
+
+    mergeObjects(q,s);
+  }
+
+
+
   console.log(q);
   Evento.queryBD(q)
   .then(dados => {
