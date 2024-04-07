@@ -34,4 +34,14 @@ module.exports.queryBD = (a) => {
             })
 }
 
+module.exports.addEvento = p => {
+    return Evento
+    .create(p)
+        .then(dados=>{
+            return dados
+        })
+        .catch(erro =>{
+            return erro
+        })
 
+}

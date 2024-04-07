@@ -1,7 +1,7 @@
 // server/index.js
 
 const express = require("express");
-
+const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3001;
 
 var Evento = require("./controllers/eventos");
@@ -14,6 +14,7 @@ function mergeObjects(data, q) {
     }
   }
 }
+
 
 var mongoose = require ('mongoose')
 
@@ -30,6 +31,11 @@ db.on('open',function(){
 })
 
 const app = express();
+
+app.use(bodyParser.json());
+
+// Middleware to parse URL-encoded bodies
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
@@ -107,6 +113,11 @@ app.get("/api/eventos/outros", (req, res) => {
   if (req.query.concelho != null && req.query.concelho != "null") {
       q.concelho = req.query.concelho;
   }
+
+  if (req.query.id != null && req.query.id != "null") {
+    q._id = req.query.id;
+  }
+
   if (req.query.categorias != null && req.query.categorias != "null") {
     q.categorias = req.query.categorias;
   }
@@ -129,8 +140,21 @@ app.get("/api/promotores", (req, res) => {
     .catch(erro => res.status(601).json({erro:erro}))
 });
 
+app.post('/api/eventos',(req,res) => {
+  console.log(req.body);
+  Evento.addEvento(req.body)
+    .then(dados => res.status(201).json(dados))
+    .catch(erro => res.status(603).json({erro:erro}))
 
-  
+})
+
+app.post('/api/promotores',(req,res) => {
+  Promotor.addPromotores(req.body)
+    .then(dados => res.status(201).json(dados))
+    .catch(erro => res.status(603).json({erro:erro}))
+
+})
+
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 });

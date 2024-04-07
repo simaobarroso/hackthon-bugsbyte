@@ -10,3 +10,16 @@ module.exports.getPromotores = () => {
                 return erro
             })
 }
+
+
+module.exports.addPromotores = p => {
+    return Promotores
+    .create(p)
+        .then(dados=>{
+            return dados
+        })
+        .catch(erro =>{
+            return erro
+        })
+
+}
