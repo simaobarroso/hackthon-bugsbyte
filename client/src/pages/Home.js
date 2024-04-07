@@ -32,6 +32,8 @@ const Home = () => {
     const [selectedConcelhoName, setSelectedConcelhoName] = useState(null);
     const [selectedCategoria, setSelectedCategoria] = useState('Todas');
     const [categorias, setCategorias] = useState(null);
+    const [dia, setDia] = useState(null)
+    const [mes, setMes] = useState(null)
     
     // Change it to null by default
     
@@ -40,7 +42,8 @@ const Home = () => {
     useEffect(() => {
         const getEventos = async () => {
             try {
-                const response = await fetch(`/api/eventos/outros?distrito=${selectedDistrict}&concelho=${selectedConcelhoName}&categorias=${selectedCategoria}`);
+                const response = await fetch(`/api/eventos/outros?dia=${dia}&mes=${mes}&search=${messageSearch}&distrito=${selectedDistrict}&concelho=${selectedConcelhoName}&categorias=${selectedCategoria}`);
+                console.log(`/api/eventos/outros?dia=${dia}&mes=${mes}&search=${messageSearch}&distrito=${selectedDistrict}&concelho=${selectedConcelhoName}&categorias=${selectedCategoria}`)
                 if (!response.ok) {
                     throw new Error('Erro ao carregar eventos');
                 }
@@ -53,10 +56,10 @@ const Home = () => {
             }
         };
         // Chama getEventos apenas se selectedDistrict não for nulo
-        if (selectedDistrict || selectedConcelhoName || selectedCategoria) {
+        if (selectedDistrict) {
             getEventos();
         }
-    }, [selectedDistrict, selectedConcelhoName, selectedCategoria]); // Dispara o useEffect apenas quando selectedDistrict mudar
+    }, [dia, mes, selectedDistrict, selectedConcelhoName, selectedCategoria, messageSearch]); // Dispara o useEffect apenas quando selectedDistrict mudar
 
 
     useEffect(() => {
@@ -176,8 +179,19 @@ const Home = () => {
 
     const search = () => {
         let searchInput = document.getElementById('searchInput');
-        setMessageSearch(`search: ${searchInput.value}`);
+        setMessageSearch(searchInput.value);
     };
+
+    const dateFilter = () => {
+        let dateInput = document.getElementById('dateInput');
+        const data = new Date(dateInput.value);
+
+        const dia = data.getDate();
+        const mes = data.getMonth() + 1; // Os meses começam do zero, então é necessário adicionar 1
+
+        setDia(dia);
+        setMes(mes);
+    }
 
     const selectCategoria = (categoria) => {
 
@@ -196,7 +210,12 @@ const Home = () => {
             {/* Mapa à esquerda */}
             <div className="map-container" onClick={handleSvgClick}>
                 {selectedDistrict ? (
-                    districtMap[selectedDistrict]
+                    <>
+                        {districtMap[selectedDistrict]}
+                        <div className="custom-button">
+                            <a onClick={closeMessage}>Fechar</a>
+                        </div>
+                    </>
                 ) : (
                     <PortugalMap className="map-svg" width="800px" height="600px" />
                 )}
@@ -207,6 +226,9 @@ const Home = () => {
                 <div className="semi-container">
                     <div className="search-container">
                         <input type="text" id="searchInput" onChange={search} placeholder="Digite sua pesquisa aqui..." />
+                    </div>
+                    <div className="date">
+                        <input type="date" id="dateInput" onChange={dateFilter} />
                     </div>
                     <div>
                         <ul className="categorias">
@@ -221,7 +243,6 @@ const Home = () => {
                         </ul>
                     </div>
                     {fetchData && (CulturalEventsScreen(fetchData))}
-                    <button onClick={closeMessage}>Fechar</button>
                 </div>
             )}
         </div>

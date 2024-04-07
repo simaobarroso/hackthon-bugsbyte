@@ -41,10 +41,10 @@ const CulturalEvent = ({ event }) => {
 
     let d;
     if (data.dia < 10){
-        d = `0${data.dia}\/${month}\/${data.ano} (${data.diaDaSemana})`
+        d = `${data.hora}, 0${data.dia}\/${month}\/${data.ano} (${data.diaDaSemana})`
     }
     else {
-        d = `${data.dia}\/${month}\/${data.ano} (${data.diaDaSemana})`
+        d = `${data.hora}, ${data.dia}\/${month}\/${data.ano} (${data.diaDaSemana})`
     }
 
     const foto = "https://upload.wikimedia.org/wikipedia/commons/1/12/Museum_Benfica_dome.JPG"

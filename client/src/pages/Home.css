@@ -13,12 +13,41 @@
 .map-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: center; /* Centralizar itens horizontalmente */
     height: 100vh;
     width: 50%;
     overflow: hidden; /* Oculta a barra de rolagem no painel esquerdo */
     position: relative;
     /* Definir a margem esquerda para 25% para centralizar inicialmente */
+}
+
+.date{
+    margin-top: 10px;
+}
+
+.custom-button {
+    display: inline-block;
+    background-color: #80171b; /* Cor de fundo do botão */
+    border: none;
+    color: white; /* Cor do texto do botão */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer;
+    border-radius: 5px; /* Borda arredondada */
+    transition-duration: 0.4s;
+    margin-top: 20px;
+}
+
+.custom-button:hover {
+    background-color: #621215; /* Cor de fundo do botão quando hover */
+}
+
+.custom-button a {
+    color: inherit; /* Garante que a cor do texto do link seja a mesma que a do botão */
+    text-decoration: none; /* Remove sublinhado do link */
 }
 
 h2 {
@@ -118,7 +147,8 @@ svg {
 ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 5px;
+  padding-top: 20px;
 }
 
 a {
@@ -129,7 +159,7 @@ a {
 ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
 }
 
 li {
