@@ -96,6 +96,27 @@ app.get("/api/eventos/outros", (req, res) => {
   }
 
   if(req.query.mes != null && req.query.mes != "null" ){
+
+    const numberToMonths = {
+      "1": 'Janeiro',
+      "2": 'Fevereiro',
+      "3": 'Março',
+      "4": 'Abril',
+      "5": 'Maio',
+      "6": 'Junho',
+      "7": 'Julho',
+      "8": 'Agosto',
+      "9": 'Setembro',
+      "10": 'Outubro',
+      "11": 'Novembro',
+      "12": 'Dezembro'
+  };
+
+  console.log(req.query.mes);
+  req.query.mes = numberToMonths[req.query.mes];
+  console.log(req.query.mes);
+
+
     d2 = {"data.mes" : req.query.mes};
 
     mergeObjects(q,d2);
